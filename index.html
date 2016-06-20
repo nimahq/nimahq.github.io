@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a responsive product landing page.">
+
+    <title>Nima</title>
+
+    
+
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+
+
+<!--[if lte IE 8]>
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+  
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  
+<!--<![endif]-->
+
+
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+
+
+  
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/marketing.css">
+    <!--<![endif]-->
+  
+
+
+    
+
+    
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAA9ukC68gFMP6h2latUehmY2xf8tqpEHY",
+    authDomain: "nima-web.firebaseapp.com",
+    databaseURL: "https://nima-web.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+  
+  function writeNewNameEmail(userName, email) {
+    // A post entry.
+    var postData = {
+      name: userName,
+      email: email
+    };
+
+    // Get a key for a new Post.
+    var newContactKey = firebase.database().ref().child('contacts').push().key;
+
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    var updates = {};
+    updates['/contacts/' + newContactKey] = postData;
+    return firebase.database().ref().update(updates);
+  }
+  
+  function DoSubmit(){
+    writeNewNameEmail(document.getElementById("name").value,document.getElementById("email").value)
+  }
+</script>
+  
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <!--<a class="pure-menu-heading" href="">NIMA</a>-->
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <!--<li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>-->
+            <!--<li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>-->
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+  
+    <div class="splash">
+        <!--<h1 class="splash-head">nima</h1>-->
+        <div style="content:url(./img/nima_logo_2.png);height:80%;align:center;margin-left: auto;margin-right: auto;"></div>
+        <p class="splash-subhead">
+            Your social & techie sherpa for everyday life.
+        </p>
+        <p>
+            <!--<a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>-->
+        </p>
+    </div>
+</div>
+
+
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center">Contact us</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+
+                        <label for="name">Your name</label>
+                        <input id="name" type="text" placeholder="Your name">
+
+
+                        <label for="email">Your email</label>
+                        <input id="email" type="email" placeholder="Your email">
+
+                        <button type="submit" class="pure-button">register</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <h4>Contact Us</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                </p>
+
+                <h4>More Information</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer l-box is-center">
+        View the source of this layout to learn more. BlaBlaBla
+    </div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
