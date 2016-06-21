@@ -293,5 +293,8 @@ a.pure-button-primary {
 }
 
 .img-circle {
+    border: 1px solid;
     border-radius: 50%;
+    border-color:#FFB71B;
 }
+
