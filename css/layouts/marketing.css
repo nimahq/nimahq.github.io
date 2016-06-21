@@ -49,8 +49,6 @@ label {
     text-align: center;
 }
 
-
-
 /*
  * -- PURE FORM STYLES --
  * Style the form inputs and labels
@@ -292,4 +290,8 @@ a.pure-button-primary {
     .splash-head {
         font-size: 300%;
     }
+}
+
+.img-circle {
+    border-radius: 50%;
 }
