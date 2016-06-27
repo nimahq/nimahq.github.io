@@ -69,11 +69,17 @@
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
     updates['/contacts/' + newContactKey] = postData;
-    return firebase.database().ref().update(updates);
+    success = firebase.database().ref().update(updates);
+    if (success) {
+     alert("Votre adresse email \< "+email+" > à bien été rajouté.") 
+    } else {
+     alert("Oups, un problème est survenu.") 
+    }
   }
   
   function DoSubmit(){
     writeNewNameEmail(document.getElementById("name").value,document.getElementById("email").value)
+    return false;
   }
 </script>
   
@@ -129,7 +135,7 @@
                         <label for="email">Your email</label>
                         <input id="email" type="email" placeholder="Your email">
 
-                        <button type="submit" class="pure-button pure-jmo-font" onclick="DoSubmit()">Join our beta-tester community</button>
+                        <button type="submit" class="pure-button pure-jmo-font" onclick="return DoSubmit();">Join our beta-tester community</button>
                     </fieldset>
                 </form>
             </div>
