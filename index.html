@@ -71,7 +71,7 @@
     updates['/contacts/' + newContactKey] = postData;
     success = firebase.database().ref().update(updates);
     if (success) {
-     alert("Votre adresse email \< "+email+" > à bien été rajouté.") 
+     alert("Votre adresse email \< "+email+" > a bien été rajoutée.") 
     } else {
      alert("Oups, un problème est survenu.") 
     }
