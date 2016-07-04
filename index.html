@@ -57,6 +57,16 @@
   firebase.initializeApp(config);
   
   function writeNewNameEmail(userName, email) {
+    
+    if(userName.length < 3){
+      swal("Oops...", "Vous avez oublié de mettre votre nom.", "error");
+      return;
+    }
+    if(email.length < 10){
+      swal("Oops...", "Vous avez oublié de mettre votre email.", "error");
+      return;
+    }
+    
     // A post entry.
     var postData = {
       name: userName,
@@ -71,9 +81,11 @@
     updates['/contacts/' + newContactKey] = postData;
     success = firebase.database().ref().update(updates);
     if (success) {
-     alert("Votre adresse email \< "+email+" > a bien été rajoutée.") 
+      //alert("Votre adresse email \< "+email+" > à bien été rajouté.") 
+      swal("Yeah !", "Votre adresse email \< "+email+" > a bien été rajoutée.", "success")
+      
     } else {
-     alert("Oups, un problème est survenu.") 
+      swal("Oops...", "Un problème est survenu.", "error");
     }
   }
   
@@ -82,7 +94,11 @@
     return false;
   }
 </script>
-  
+
+
+<script src="dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
 </head>
 <body>
 
