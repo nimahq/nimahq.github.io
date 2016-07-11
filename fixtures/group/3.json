@@ -1,0 +1,28 @@
+{
+	"grId" : 3,
+	"grTitle" : "Pré-Vacances de Jérôme",
+	"grDescription" : "Trouver les tâches à avancer pendant son absence"
+	"tasks" : [
+		{
+			"taskId" : 7,
+			"taskTitle" : "Prendre un github privé",
+			"taskDetails" : "7euros/mois",
+			"taskOwner" : "Jérôme",
+			"achiever"  : "Jérôme"
+		},
+		{
+			"taskId" : 19,
+			"taskTitle" : "Migrer le site sur un hebergeur",
+			"taskDetails" : "",
+			"taskOwner" : "Jérôme",
+			"achiever"  : "Jérôme"
+		},
+		{
+			"taskId" : 20,
+			"taskTitle" : "Préparer les mock",
+			"taskDetails" : "",
+			"taskOwner" : "Jérôme",
+			"achiever"  : "Jérôme"
+		}
+	]
+}

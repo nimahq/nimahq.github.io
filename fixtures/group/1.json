@@ -1,0 +1,35 @@
+{
+	"grId" : 1,
+	"grTitle" : "Vacances en Corse",
+	"grDescription" : "La liste des choses à préparer.",
+	"tasks":[
+		{
+			"taskId" : 1,
+			"taskTitle" : "Trouver les billets d'avion",
+			"taskDetails" : "Budget max/personne 600euros\nDate du semaine 45.",
+			"taskOwner" : "Jean",
+			"achiever"  : "Raphael"
+		},
+		{
+			"taskId" : 2,
+			"taskTitle" : "Trouver l'appart à l'île Rousse",
+			"taskDetails" : "",
+			"taskOwner" : "Jean",
+			"achiever"  : "Jean"
+		},
+		{
+			"taskId" : 3,
+			"taskTitle" : "Prévoir planning repas et des courses",
+			"taskDetails" : "",
+			"taskOwner" : "Jean",
+			"achiever"  : null
+		},
+		{
+			"taskId" : 4,
+			"taskTitle" : "Faire itinéraire de randonnée",
+			"taskDetails" : "",
+			"taskOwner" : "Jean",
+			"achiever"  : null
+		}
+	]
+}

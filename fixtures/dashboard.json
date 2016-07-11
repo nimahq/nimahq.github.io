@@ -1,0 +1,25 @@
+{
+	"groups":[
+		{
+			"grId" : 1,
+			"grTitle" : "Vacances en Corse",
+			"grDescription" : "La liste des choses à préparer."
+		},
+		{
+			"grId" : 2,
+			"grTitle" : "Cadeau(x) pour Louis",
+			"grDescription" : "Il faut qu'on arrive à choisir !"
+		},
+		{
+			"id" : 3,
+			"title" : "Pré-Vacances de Jérôme",
+			"description" : "Trouver les tâches à avancer pendant son absence"
+		}
+	],
+	"challenges":[
+	],
+	"menu":{
+		"private" : [],
+		"groups" : []		
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"grId" : 2,
+	"grTitle" : "Cadeau(x) pour Louis",
+	"grDescription" : "Il faut qu'on arrive à choisir !",
+	"tasks" : [
+		{
+			"taskId" : 3,
+			"taskTitle" : "Une PS4",
+			"taskDetails" : "",
+			"taskOwner" : "Raphael",
+			"achiever"  : null
+		},
+		{
+			"taskId" : 4,
+			"taskTitle" : "La trilogie des fourmis",
+			"taskDetails" : "",
+			"taskOwner" : "Raphael",
+			"achiever"  : null
+		}
+	]
+}
